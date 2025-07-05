@@ -13,7 +13,7 @@ Data berisi informasi nasabah bank yang mencakup: usia, jenis kelamin, pendapata
 """)
 
 # Load Data
-uploaded_file = st.file_uploader("/content/Data_Nasabah.csv", type="csv")
+uploaded_file = st.file_uploader("Data_Nasabah.csv", type="csv")
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file, delimiter=';')
@@ -55,5 +55,5 @@ if uploaded_file is not None:
     st.bar_chart(avg_income)
 
 else:
-    st.info("/content/data_nasabah_baru.csv.")
+    st.info("data_nasabah_baru.csv.")
 

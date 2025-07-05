@@ -54,6 +54,16 @@ if uploaded_file is not None:
     avg_income = df.groupby("jenis_produk")["pendapatan"].mean().sort_values()
     st.bar_chart(avg_income)
 
+    # 🔽 Tambahkan tombol unduh hasil CSV
+    st.subheader("📥 Unduh Data yang Sudah Dibersihkan")
+    csv = df.to_csv(index=False).encode('utf-8')
+    st.download_button(
+        label="📥 Unduh Data sebagai CSV",
+        data=csv,
+        file_name='data_nasabah_bersih.csv',
+        mime='text/csv',
+    )
+
 else:
     st.info("data_nasabah.csv.")
 

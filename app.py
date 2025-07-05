@@ -55,5 +55,5 @@ if uploaded_file is not None:
     st.bar_chart(avg_income)
 
 else:
-    st.info("data_nasabah_baru.csv.")
+    st.info("data_nasabah.csv.")
 
